@@ -64,7 +64,6 @@
      <Compile Include="Assets\TankGame\Scripts\Enums\EWeapons.cs" />
      <Compile Include="Assets\TankGame\Scripts\Tank\WeaponController.cs" />
      <Compile Include="Assets\TankGame\Scripts\Enums\EEntity.cs" />
-     <Folder Include="Assets" />
      <Folder Include="Assets\TankGame" />
      <Folder Include="Assets\TankGame\Resources\EWeapons" />
      <Folder Include="Assets\TankGame\Content\Material\Tank" />
@@ -790,6 +789,7 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\README.MD" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
