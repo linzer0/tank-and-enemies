@@ -9,7 +9,7 @@ namespace TankGame
         [SerializeField] protected LayerMask targetLayerMask;
 
         public Entity Entity => entity;
-        
+
         protected Entity TargetEntity;
         protected Transform TargetTransform;
         protected bool BehaviourIsStarted = false;
@@ -31,6 +31,11 @@ namespace TankGame
             {
                 TargetEntity.DealDamage(damage);
             }
+        }
+
+        protected bool EntityIsActive()
+        {
+            return BehaviourIsStarted && TargetEntity.IsAlive();
         }
     }
 }

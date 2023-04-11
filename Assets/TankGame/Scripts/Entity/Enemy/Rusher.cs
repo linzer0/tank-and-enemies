@@ -18,7 +18,7 @@ namespace TankGame
 
         void Update()
         {
-            if (BehaviourIsStarted && TargetEntity.IsAlive())
+            if (EntityIsActive())
             {
                 if (_currentState == RusherState.Idle)
                 {

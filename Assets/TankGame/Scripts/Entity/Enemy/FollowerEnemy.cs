@@ -6,7 +6,7 @@ namespace TankGame
     {
         void Update()
         {
-            if (BehaviourIsStarted && TargetEntity.IsAlive())
+            if (EntityIsActive())
             {
                 if (Vector3.Distance(Entity.EntityObject.transform.position, TargetTransform.position) > 1)
                 {
