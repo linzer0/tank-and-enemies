@@ -13,7 +13,6 @@ namespace TankGame
     {
         [SerializeField] private Rigidbody rigidbody;
         [SerializeField] private LayerMask targetLayer;
-        
 
         public event Action<GameObject> ObjectCollision = (x) => { };
         public Rigidbody Rigidbody => rigidbody;
@@ -48,7 +47,7 @@ namespace TankGame
 
         public void ResetProjectile()
         {
-            ObjectCollision = null;
+            ObjectCollision = (x) => {};
         }
     }
 }

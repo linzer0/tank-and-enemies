@@ -45,7 +45,7 @@ namespace TankGame
 
         private void OnDisable()
         {
-            EntityDeath = null;
+            EntityDeath = () => { };
         }
     }
 }
