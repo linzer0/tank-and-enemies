@@ -10,7 +10,6 @@ namespace TankGame
         [SerializeField] protected EConfigs stats;
 
         public EConfigs Stats => stats;
-
         public GameObject EntityObject => gameObject;
 
         private float _currentHealth;
