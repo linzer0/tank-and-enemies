@@ -31,3 +31,6 @@ The game includes the following features:
 2. Open the project in Unity.
 3. Select the **GameScene** scene in the Assets/TankGame/Scenes folder.
 4. Click the play button to start the game.
+
+## TODO
+- Need to create configs for Weapons and Enemy Damage
