@@ -57,17 +57,24 @@
      <Compile Include="Assets\TankGame\Scripts\Enums\EProjectiles.cs" />
      <Compile Include="Assets\TankGame\Scripts\Entity\Enemy\FollowerEnemy.cs" />
      <Compile Include="Assets\TankGame\Scripts\Weapons\Projectile.cs" />
-     <Compile Include="Assets\TankGame\Scripts\IDamageable.cs" />
+     <Compile Include="Assets\TankGame\Scripts\Entity\IDamageable.cs" />
      <Compile Include="Assets\TankGame\Scripts\Starter.cs" />
      <Compile Include="Assets\TankGame\Scripts\Entity\Entity.cs" />
      <Compile Include="Assets\TankGame\Scripts\Input\EInputCommands.cs" />
      <Compile Include="Assets\TankGame\Scripts\Enums\EWeapons.cs" />
      <Compile Include="Assets\TankGame\Scripts\Tank\WeaponController.cs" />
      <Compile Include="Assets\TankGame\Scripts\Enums\EEntity.cs" />
+     <Compile Include="Assets\TankGame\Scripts\Configs\EntityStats.cs" />
+     <Compile Include="Assets\TankGame\Scripts\Configs\ConfigReader.cs" />
+     <Compile Include="Assets\TankGame\Scripts\Enums\EConfigs.cs" />
+     <Folder Include="Assets" />
      <Folder Include="Assets\TankGame" />
+     <None Include="Assets\TankGame\Resources\EConfigs\TankConfig.json" />
      <Folder Include="Assets\TankGame\Resources\EWeapons" />
      <Folder Include="Assets\TankGame\Content\Material\Tank" />
      <Folder Include="Assets\TankGame\Resources\EEntity" />
+     <None Include="Assets\TankGame\Resources\EConfigs\RusherConfig.json" />
+     <None Include="Assets\TankGame\Resources\EConfigs\FollowerConfig.json" />
      <Folder Include="Assets\TankGame\Scripts" />
      <Folder Include="Assets\TankGame\Scripts\ResourceManager" />
      <Folder Include="Assets\TankGame\Scripts\Enums" />
@@ -81,7 +88,9 @@
      <Folder Include="Assets\TankGame\Resources\EProjectiles" />
      <Folder Include="Assets\TankGame\Scenes" />
      <Folder Include="Assets\TankGame\Scripts\Input" />
+     <Folder Include="Assets\TankGame\Scripts\Configs" />
      <Folder Include="Assets\TankGame\Scripts\Weapons" />
+     <Folder Include="Assets\TankGame\Resources\EConfigs" />
      <Reference Include="UnityEngine">
      <HintPath>E:\Programs\Gamedev\Editor\2021.3.17f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -789,7 +798,6 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\README.MD" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

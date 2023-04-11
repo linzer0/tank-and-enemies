@@ -38,6 +38,7 @@ namespace TankGame
             weaponController.Initialize(_resourceManager);
             weaponController.SetWeapon(EWeapons.ShotGun);
             _tankEntity = tankObject.GetComponent<Entity>();
+            _tankEntity.SetStats(ConfigReader.ReadConfig<EntityStats>(EConfigs.TankConfig));
             
             var tankController = MonoBehaviourExtension.CreateComponent<TankController>();
             tankController.Initialize(_tankEntity, weaponController, tankObject);

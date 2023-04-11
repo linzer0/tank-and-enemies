@@ -19,6 +19,11 @@ namespace TankGame
             TargetEntity = targetEntity;
         }
 
+        public void InitializeEntity(EntityStats entityStats)
+        {
+            entity.SetStats(entityStats);
+        }
+
         public virtual void StartBehaviour()
         {
             TargetTransform = TargetEntity.EntityObject.transform;

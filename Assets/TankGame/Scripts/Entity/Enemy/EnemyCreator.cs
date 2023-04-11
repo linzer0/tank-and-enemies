@@ -11,10 +11,12 @@ namespace TankGame
 
         private List<EEntity> _enemyTypes;
         private int _enemyAmount = 10;
+        private Dictionary<EEntity, EntityStats> _entityStats;
 
         private void Awake()
         {
             _enemyTypes = new List<EEntity>() { EEntity.Follower, EEntity.Rusher };
+            _entityStats = new Dictionary<EEntity, EntityStats>();
             _listOfZones = new List<Vector3>
             {
                 Camera.main.ViewportToWorldPoint(Vector3.left),
@@ -26,6 +28,7 @@ namespace TankGame
 
         public void Initialize(IResourceManager resourceManager, Entity tankEntity)
         {
+            var followerConfig = ConfigReader.ReadConfig<EntityStats>(EConfigs.FollowerConfig);
             _resourceManager = resourceManager;
             _tankEntity = tankEntity;
 
@@ -47,9 +50,21 @@ namespace TankGame
             enemyObject.transform.position = GetEnemyPosition();
 
             var enemyComponent = enemyObject.GetComponent<Enemy>();
+            var stats = GetStats(enemyType, enemyComponent.Entity.Stats);
+            enemyComponent.InitializeEntity(stats);
             enemyComponent.Entity.EntityDeath += CreateRandomEnemy;
             enemyComponent.SetTarget(_tankEntity);
             enemyComponent.StartBehaviour();
+        }
+
+        private EntityStats GetStats(EEntity entityType, EConfigs config)
+        {
+            if (_entityStats.ContainsKey(entityType) == false)
+            {
+                _entityStats.Add(entityType, ConfigReader.ReadConfig<EntityStats>(config));
+            }
+
+            return _entityStats[entityType];
         }
 
 

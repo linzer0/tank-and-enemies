@@ -7,24 +7,26 @@ namespace TankGame
     {
         public event Action EntityDeath = () => { };
 
-        [SerializeField] protected float speed = 2;
-        [SerializeField] protected float armor = 0.5f;
-        [SerializeField] protected float health = 100;
+        [SerializeField] protected EConfigs stats;
+
+        public EConfigs Stats => stats;
 
         public GameObject EntityObject => gameObject;
 
         private float _currentHealth;
-
-        private void OnEnable()
+        private EntityStats _entityStats;
+        
+        public void SetStats(EntityStats entityStats)
         {
-            _currentHealth = health;
+            _currentHealth = entityStats.Health;
+            _entityStats = entityStats;
         }
 
         public void DealDamage(float damage)
         {
             if (IsAlive())
             {
-                _currentHealth -= damage * armor;
+                _currentHealth -= damage * _entityStats.Armor;
             }
             else
             {
@@ -40,7 +42,7 @@ namespace TankGame
 
         public float GetSpeed()
         {
-            return speed;
+            return _entityStats.Speed;
         }
 
         private void OnDisable()

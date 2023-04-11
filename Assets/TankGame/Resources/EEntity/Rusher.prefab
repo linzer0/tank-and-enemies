@@ -145,9 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec91417cd5a04154a7962acdb727f90f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  armor: 0.3
-  health: 100
+  stats: 1
 --- !u!114 &455215624339110909
 MonoBehaviour:
   m_ObjectHideFlags: 0
