@@ -4,7 +4,7 @@ The game was implemented using Unity version 2021.3.17f1 and C# scripting langua
 
 ## How to Play
 ### Controls
-- Move and Rotate the tank: arrow keys (up, down, left, right / w, a, s, d)
+- Move and Rotate the tank: (up, down, left, right / w, a, s, d)
 - Shoot: Key X
 - Switch weapons: Q and E keys
 ### Gameplay
