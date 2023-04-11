@@ -34,3 +34,5 @@ The game includes the following features:
 
 ## TODO
 - Need to create configs for Weapons and Enemy Damage
+- Make monster spawning closer to the player
+- Add barriers to prevent the player from going outside the camera
